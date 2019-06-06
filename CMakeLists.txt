@@ -21,7 +21,7 @@ endif()
 
 project( hipblas LANGUAGES CXX )
 
-# If debug, add explicitly add -O0 optimization to override built-in -O3 optimization of HIP compiler
+# Define -On optimization flags for debug and release builds 
 if(CMAKE_BUILD_TYPE MATCHES Debug)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Og -Wall -Wextra -Wno-unused-function")
 else()
